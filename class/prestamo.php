@@ -9,9 +9,8 @@ class prestamos extends Conex
         $usuario = "1";
        
         $p = explode (" ",$ambiente);
-        echo $p[2];
         $sql = "insert into prestamo_ambientes(cede,hora_ingreso, hora_salida, observaciones, no, id, fecha_prestamo, fecha_devolucion)";
-        $sql .= "values('$p[2]','$h_ingreso', '$h_salida', '$observaciones', '$p[0]', '$usuario', '$f_prestamo', '$f_devolucion')";
+        $sql .= "values('$p[1]','$h_ingreso', '$h_salida', '$observaciones', '$p[0]', '$usuario', '$f_prestamo', '$f_devolucion')";
         $resultado = $conexion->query($sql);
         echo $sql;
         if ($conexion ->affected_rows > 0)
